@@ -1,0 +1,14 @@
+{
+  "test_name": "Bitunix 8-week funding carry paper test",
+  "test_window": {"start_utc": "2026-09-14T04:10:00Z", "end_utc": "2026-11-09T04:10:00Z"},
+  "capital": {"total_usdt": 1000.0, "spot_allocation_usdt": 500.0, "futures_collateral_usdt": 500.0},
+  "strategy": {"top_k": 3, "lookback_weeks": 4},
+  "fees": {"spot_taker": 0.001, "futures_taker": 0.0006},
+  "universe": ["ADAUSDT", "ATOMUSDT", "BNBUSDT", "BTCUSDT", "DOGEUSDT", "DOTUSDT", "ETHUSDT", "LINKUSDT", "NEARUSDT", "SOLUSDT", "XRPUSDT"],
+  "failure_gates": {
+    "minimum_net_annualized_return": 0.05,
+    "maximum_hedge_mismatch_fraction": 0.005,
+    "maximum_missing_capture_fraction": 0.05,
+    "minimum_completed_weeks": 8
+  }
+}
