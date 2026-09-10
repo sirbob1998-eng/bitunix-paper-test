@@ -1,0 +1,20 @@
+{
+  "agent": {
+    "mode": "shadow_only",
+    "risk_policy": {
+      "maximum_positions": 3,
+      "maximum_total_allocation_usdt": 500.0,
+      "maximum_symbol_allocation_usdt": 200.0,
+      "minimum_confidence": 0.55,
+      "maximum_abs_basis_fraction": 0.03,
+      "maximum_spread_fraction": 0.005,
+      "maximum_context_age_minutes": 30
+    }
+  },
+  "promotion_gates": {
+    "minimum_shadow_decisions": 24,
+    "maximum_rejection_fraction": 0.10,
+    "maximum_policy_breaches": 0,
+    "minimum_outperformance_after_costs": 0.0
+  }
+}

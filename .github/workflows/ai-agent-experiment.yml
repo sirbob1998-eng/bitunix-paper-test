@@ -1,0 +1,49 @@
+name: AI agent experiment
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "agent/**"
+      - "agent_runner.py"
+      - "agent_config.json"
+      - "tests/test_agent.py"
+      - ".github/workflows/ai-agent-experiment.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -v
+
+  shadow-decision:
+    if: github.event_name == 'workflow_dispatch'
+    needs: tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate guarded shadow decision
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: python agent_runner.py --output run/decisions.jsonl
+      - name: Upload decision audit record
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-agent-shadow-decision
+          path: run/decisions.jsonl
+          if-no-files-found: warn
+          retention-days: 30
