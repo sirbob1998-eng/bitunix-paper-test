@@ -1,0 +1,45 @@
+name: Bitunix paper test
+
+on:
+  schedule:
+    - cron: "10 4,12,20 * * *"
+  workflow_dispatch:
+    inputs:
+      health_check:
+        description: "Validate public endpoints without changing paper positions"
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bitunix-paper-test
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run offline tests
+        run: python -m unittest discover -s tests -v
+      - name: Capture paper-test checkpoint
+        env:
+          HEALTH_CHECK: ${{ github.event_name == 'workflow_dispatch' && inputs.health_check == true }}
+        run: python collector.py
+      - name: Commit updated ledger
+        if: env.HEALTH_CHECK != 'true'
+        run: |
+          git config user.name "bitunix-paper-test[bot]"
+          git config user.email "bitunix-paper-test[bot]@users.noreply.github.com"
+          git add paper_test/
+          if ! git diff --cached --quiet; then
+            git commit -m "paper test: capture $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

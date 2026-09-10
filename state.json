@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "status": "not_started",
+  "cash": 1000.0,
+  "positions": {},
+  "last_capture_utc": null,
+  "last_funding_time_ms": {},
+  "last_rebalance_week": null,
+  "captures_expected": 0,
+  "captures_successful": 0,
+  "captures_failed": 0,
+  "completed_weeks": 0,
+  "funding_earned": 0.0,
+  "last_error": null
+}
