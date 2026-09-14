@@ -1,1 +1,2 @@
 timestamp_utc,status,cash_usdt,spot_value_usdt,futures_unrealized_pnl_usdt,funding_earned_usdt,equity_usdt,return_pct,annualized_return_pct,selected_symbols,hedge_mismatch_pct,errors
+2026-09-14T04:25:04.452220Z,running,499.200151229958,499.8876917130277,-0.1123082869722993,0.0,998.9755346560135,-0.10244653439865914,-99.98747334180844,XRPUSDT|DOGEUSDT|ADAUSDT,0,
