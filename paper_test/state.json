@@ -1,42 +1,42 @@
 {
-  "captures_expected": 21,
+  "captures_expected": 22,
   "captures_failed": 0,
-  "captures_successful": 21,
-  "cash": 500.1981344507802,
-  "completed_weeks": 0,
+  "captures_successful": 22,
+  "cash": 528.8976883093328,
+  "completed_weeks": 1,
   "first_entry_utc": "2026-09-14T04:25:04.452220Z",
-  "funding_earned": 0.9979832208221944,
-  "last_capture_utc": "2026-09-20T20:21:57.433355Z",
+  "funding_earned": 1.0683611965921143,
+  "last_capture_utc": "2026-09-21T04:24:26.096864Z",
   "last_error": "",
   "last_funding_time_ms": {
-    "ADAUSDT": 1789920000000,
-    "ATOMUSDT": 1789920000000,
-    "BNBUSDT": 1789920000000,
-    "BTCUSDT": 1789920000000,
-    "DOGEUSDT": 1789920000000,
-    "DOTUSDT": 1789920000000,
-    "ETHUSDT": 1789920000000,
-    "LINKUSDT": 1789920000000,
-    "NEARUSDT": 1789920000000,
-    "SOLUSDT": 1789920000000,
-    "XRPUSDT": 1789920000000
+    "ADAUSDT": 1789948800000,
+    "ATOMUSDT": 1789948800000,
+    "BNBUSDT": 1789948800000,
+    "BTCUSDT": 1789948800000,
+    "DOGEUSDT": 1789948800000,
+    "DOTUSDT": 1789948800000,
+    "ETHUSDT": 1789948800000,
+    "LINKUSDT": 1789948800000,
+    "NEARUSDT": 1789948800000,
+    "SOLUSDT": 1789948800000,
+    "XRPUSDT": 1789948800000
   },
-  "last_rebalance_week": "2026-W38",
+  "last_rebalance_week": "2026-W39",
   "positions": {
     "ADAUSDT": {
       "futures_avg_entry": 0.2072,
       "opened_at_ms": 1789359904452,
-      "quantity": 803.9877793857532
+      "quantity": 722.4389539083948
     },
     "DOGEUSDT": {
       "futures_avg_entry": 0.0841,
       "opened_at_ms": 1789359904452,
-      "quantity": 1980.5902158843332
+      "quantity": 1894.8006669698348
     },
     "XRPUSDT": {
       "futures_avg_entry": 1.3764,
       "opened_at_ms": 1789359904452,
-      "quantity": 121.03606874848704
+      "quantity": 117.71907519894523
     }
   },
   "schema_version": 1,
