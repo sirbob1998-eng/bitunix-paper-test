@@ -1,12 +1,12 @@
 {
-  "captures_expected": 137,
+  "captures_expected": 138,
   "captures_failed": 0,
-  "captures_successful": 135,
+  "captures_successful": 136,
   "cash": 577.0983582953006,
   "completed_weeks": 3,
   "first_entry_utc": "2026-09-14T04:25:04.452220Z",
   "funding_earned": 6.351691283450097,
-  "last_capture_utc": "2026-10-29T18:26:11.088258Z",
+  "last_capture_utc": "2026-10-29T23:55:08.413871Z",
   "last_error": "",
   "last_funding_time_ms": {
     "ADAUSDT": 1793289600000,
