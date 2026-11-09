@@ -1,44 +1,40 @@
 {
-  "captures_expected": 168,
+  "captures_expected": 169,
   "captures_failed": 0,
-  "captures_successful": 164,
-  "cash": 578.3943434982896,
-  "completed_weeks": 3,
+  "captures_successful": 165,
+  "cash": 1006.1290658290782,
+  "completed_weeks": 8,
+  "final_annualized_return_pct": 4.039461475007489,
+  "final_equity_usdt": 1006.1290658290782,
+  "final_return_pct": 0.612906582907824,
   "first_entry_utc": "2026-09-14T04:25:04.452220Z",
-  "funding_earned": 7.647676486439108,
-  "last_capture_utc": "2026-11-08T23:40:40.463552Z",
+  "funding_earned": 7.697498299232647,
+  "gate_results": {
+    "completed_weeks": true,
+    "hedge_mismatch": true,
+    "missing_capture_fraction": true,
+    "net_annualized_return": false,
+    "net_profit_after_costs": true,
+    "no_unmatched_legs": true
+  },
+  "last_capture_utc": "2026-11-09T12:46:31.389202Z",
   "last_error": "",
   "last_funding_time_ms": {
-    "ADAUSDT": 1794153600000,
-    "ATOMUSDT": 1794153600000,
-    "BNBUSDT": 1794153600000,
-    "BTCUSDT": 1794153600000,
-    "DOGEUSDT": 1794153600000,
-    "DOTUSDT": 1794153600000,
-    "ETHUSDT": 1794153600000,
-    "LINKUSDT": 1794153600000,
-    "NEARUSDT": 1794153600000,
-    "SOLUSDT": 1794153600000,
-    "XRPUSDT": 1794153600000
+    "ADAUSDT": 1794211200000,
+    "ATOMUSDT": 1794211200000,
+    "BNBUSDT": 1794211200000,
+    "BTCUSDT": 1794211200000,
+    "DOGEUSDT": 1794211200000,
+    "DOTUSDT": 1794211200000,
+    "ETHUSDT": 1794211200000,
+    "LINKUSDT": 1794211200000,
+    "NEARUSDT": 1794211200000,
+    "SOLUSDT": 1794211200000,
+    "XRPUSDT": 1794211200000
   },
   "last_rebalance_week": "2026-W41",
-  "positions": {
-    "ADAUSDT": {
-      "futures_avg_entry": 0.2072,
-      "opened_at_ms": 1789359904452,
-      "quantity": 624.2197253433208
-    },
-    "DOGEUSDT": {
-      "futures_avg_entry": 0.0841,
-      "opened_at_ms": 1789359904452,
-      "quantity": 1743.7399734951523
-    },
-    "XRPUSDT": {
-      "futures_avg_entry": 1.3764,
-      "opened_at_ms": 1789359904452,
-      "quantity": 110.50700614418953
-    }
-  },
+  "missing_capture_fraction": 0.023668639053254448,
+  "positions": {},
   "schema_version": 1,
-  "status": "running"
+  "status": "complete_fail"
 }
